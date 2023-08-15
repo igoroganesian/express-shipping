@@ -14,6 +14,7 @@ const shippingSchema = require("../schemas/shippingSchema.json");
  *   { productId, name, addr, zip }
  *
  * Returns { shipped: shipId }
+ * or 400 errors if schema validation fails
  */
 
 router.post("/", async function (req, res, next) {
