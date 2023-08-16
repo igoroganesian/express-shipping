@@ -25,6 +25,7 @@ router.post("/", async function (req, res, next) {
     throw new BadRequestError(errs);
   }
 
+
   const { productId, name, addr, zip } = req.body;
   const shipId = await shipProduct({ productId, name, addr, zip });
   return res.json({ shipped: shipId });
